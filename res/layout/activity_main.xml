@@ -34,6 +34,7 @@
         	android:layout_below="@id/Log_in_Button"
         	android:layout_centerHorizontal="true"
         	android:layout_marginTop="40dp"
-        	android:text="@string/view_streams" />
+        	android:text="@string/view_streams"
+        	android:onClick="viewAllStreams" />
         
 </RelativeLayout>
