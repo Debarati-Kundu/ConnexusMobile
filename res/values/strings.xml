@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ConnexusMobile</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Welcome to Connexus Mobile!</string>
+    <string name="view_streams">View all photo streams</string>
+    <string name="log_in">Log in using Google account</string>
+
+</resources>
+
