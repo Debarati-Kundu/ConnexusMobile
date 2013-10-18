@@ -9,5 +9,10 @@
 	<classpathentry kind="lib" path="/home/debarati/Documents/apt/apt-connexus/appengine/apt-connexus/war/WEB-INF/lib/guava-15.0.jar"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="lib" path="libs/android-query-full.0.25.10.jar"/>
+	<classpathentry kind="lib" path="libs/gson-2.2.4.jar"/>
+	<classpathentry kind="lib" path="libs/guava-15.0.jar"/>
+	<classpathentry kind="lib" path="libs/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="libs/objectify-4.0b1.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

@@ -1,46 +1,56 @@
 package com.example.connexusmobile;
 
+import java.net.MalformedURLException;
 import java.net.URL;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.google.common.base.Charsets;
-import com.google.common.io.Resources;
+import com.google.gson.Gson;
 
 public class DisplayAllStreamsActivity extends Activity {
 
 	public String AppURL = "http://apt-connexus.appspot.com/";
 	public String AppServlet = "AllStreamsServletAPI";
+	public String AppTotalTarget = AppURL + AppServlet;
 	
+	private GetSteamsFromServer mGetSteamsFromServer;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_display_all_streams);
 		setupActionBar();
 		
-		/*
-		AsyncHttpClient client = new AsyncHttpClient();   
-        client.get(AppURL + AppServlet, new AsyncHttpResponseHandler() {
-            @Override
-            public void onSuccess(String response) {
-                System.out.println(response);                   
-            }
-            @Override
-            public void onFailure(Throwable throwable, String s) {
-                super.onFailure(throwable, s);
-                System.out.println("onFailure");
-           }*/
+		URL targetServer = null;
+		try {
+			targetServer = new URL("http://apt-connexus.appspot.com/AllStreamsServletAPI");
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		mGetSteamsFromServer  = new GetSteamsFromServer();
+	    mGetSteamsFromServer.execute(AppTotalTarget);
+	    
+
 	}
 
-	/**
-	 * Set up the {@link android.app.ActionBar}, if the API is available.
-	 */
+	public class GetSteamsFromServer extends AsyncTask<String, Integer, String> {
+		@Override
+		protected String doInBackground(String... AppTotalTarget) {
+	//		Log.d(AppURL, AppTotalTarget.toString());
+			Gson gson = new Gson();
+			return null;
+		}
+	}
+	
+
 	@TargetApi(Build.VERSION_CODES.HONEYCOMB)
 	private void setupActionBar() {
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
@@ -59,17 +69,17 @@ public class DisplayAllStreamsActivity extends Activity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case android.R.id.home:
-			// This ID represents the Home or Up button. In the case of this
-			// activity, the Up button is shown. Use NavUtils to allow users
-			// to navigate up one level in the application structure. For
-			// more details, see the Navigation pattern on Android Design:
-			//
-			// http://developer.android.com/design/patterns/navigation.html#up-vs-back
-			//
 			NavUtils.navigateUpFromSameTask(this);
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+	
+	protected void onDestroy() {
+	    super.onDestroy();
+	    if (mGetSteamsFromServer != null) {
+	        mGetSteamsFromServer.cancel(true);
+	    }
 	}
 
 }
