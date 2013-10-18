@@ -5,14 +5,16 @@
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
 	<classpathentry kind="lib" path="libs/async-http-client-1.7.5.jar"/>
 	<classpathentry kind="lib" path="libs/android-async-http-1.4.3.jar"/>
-	<classpathentry kind="lib" path="/home/debarati/Documents/apt/apt-connexus/appengine/apt-connexus/war/WEB-INF/lib/gson-2.2.4.jar"/>
-	<classpathentry kind="lib" path="/home/debarati/Documents/apt/apt-connexus/appengine/apt-connexus/war/WEB-INF/lib/guava-15.0.jar"/>
-	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="src" path="gen"/>
 	<classpathentry kind="lib" path="libs/android-query-full.0.25.10.jar"/>
 	<classpathentry kind="lib" path="libs/gson-2.2.4.jar"/>
 	<classpathentry kind="lib" path="libs/guava-15.0.jar"/>
 	<classpathentry kind="lib" path="libs/json-simple-1.1.1.jar"/>
 	<classpathentry kind="lib" path="libs/objectify-4.0b1.jar"/>
+	<classpathentry kind="lib" path="libs/android-support-v4.jar"/>
+	<classpathentry kind="lib" path="libs/commons-logging-1.1.3.jar"/>
+	<classpathentry kind="lib" path="libs/httpclient-4.3.jar"/>
+	<classpathentry kind="lib" path="libs/httpcore-4.3.jar"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>
