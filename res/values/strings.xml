@@ -7,5 +7,6 @@
     <string name="view_streams">View all photo streams</string>
     <string name="log_in">Log in using Google account</string>
     <string name="title_activity_display_all_streams">View All Streams</string>
+    <string name="imageview_description">Image Thumbnail</string>
 
 </resources>
